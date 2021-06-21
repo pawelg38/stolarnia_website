@@ -1,0 +1,22 @@
+.mainNav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+  background-color: rgba(#000, .2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  :nth-child(1) {
+    margin-right: auto;
+  }
+}
+.logo {
+}
+.customMdBtn {
+  margin-right: 20px !important;
+  background-color: rgb(240, 240, 240) !important;
+  background-color: #fff !important;
+}

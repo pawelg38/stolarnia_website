@@ -1,0 +1,19 @@
+.container {
+  padding: 30px 0 50px 0;
+  text-align: center;
+  background-color: rgba(#000, 0.1);
+  color: #fff;
+
+  h1 {
+    color: rgba(#000, 0.8);
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-evenly;
+    //padding-bot: 0px;
+    flex-wrap: wrap;
+  }
+}
