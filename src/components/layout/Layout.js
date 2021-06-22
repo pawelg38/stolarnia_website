@@ -1,20 +1,15 @@
 import MainNavigation from "./MainNavigation";
-import Slider from './Slider';
-import Adventages from './Adventages.js';
-import PortfolioPreview from "./PortfolioPreview";
 import Footer from "./Footer";
 
 import classes from './Layout.module.scss';
 
-function Layout() {
+function Layout(props) {
   return (
-    <>
+    <div>
       <MainNavigation />
-      <Slider />
-      <Adventages />
-      <PortfolioPreview />
+        {props.children}
       <Footer />
-    </>
+    </div>
   )
 }
 

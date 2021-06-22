@@ -25,8 +25,8 @@ function Footer() {
       <Box className={classes.mapBox} boxShadow={8}>
         <h1>Znajdź nas na mapie:</h1>
         <div className={classes.mapouter}>
-          <div  className={classes.gmap_canvas}>
-            <iframe className={classes.gmap_iframe} frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Polska Grzybno 87-327&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          <div className={classes.gmap_canvas}>
+            <iframe className={classes.gmap_iframe} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Polska Grzybno 87-327&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
           </div>
         </div>
       </Box>

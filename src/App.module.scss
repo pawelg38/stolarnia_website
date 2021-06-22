@@ -1,0 +1,19 @@
+.enter {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+}
+.enterActive {
+  left: 0;
+  transition: all 2500ms linear;
+}
+.exit {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top:0;
+}
+.exitActive {
+  left: -100%;
+  transition: all 2500ms linear;
+}
