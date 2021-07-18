@@ -42,25 +42,26 @@ function Gallery(props) {
         <div className={classes.galleryContainer}>
           <button className={classes.exitBtn} onClick={props.showGalleryHandler}></button>
           <div className={classes.pickedImg}>
-            <button onClick={prevImgHandler}>
+            <button className={classes.prevImgBtn} onClick={prevImgHandler}>
               <span class="material-icons" style={{color: '#fff', fontSize: '40px'}}>chevron_left</span>
             </button>
             {props.images.map( (img, index) => {
               if (index === pickedImg)
                 return (
-                  <div key={index}>
-                    <img className={!pickedImgLoaded ? classes.hideElement : null} onLoad={() => setPickedImgLoaded(true)} src={img} />
+                  <div className={classes.imgBox} key={index}>
+                    <img className={!pickedImgLoaded ? classes.hideElement : null} onLoad={() => setPickedImgLoaded(true)} src={img} alt=""/>
                     <h1 className={pickedImgLoaded ? classes.hideElement : null}>Loading</h1>
                   </div>
                 )
+              return null;
             })}
-            <button onClick={nextImgHandler}>
+            <button className={classes.nextImgBtn} onClick={nextImgHandler}>
               <span class="material-icons" style={{color: '#fff', fontSize: '40px'}}>chevron_right</span>
             </button>
           </div>
           <div className={classes.otherImages}>
             {props.images.map((img, index) => {
-              return <Thumbnail key={index} img={img} active={index==pickedImg ? true:false}/>
+              return <Thumbnail key={index} img={img} active={index===pickedImg ? true:false}/>
             })}
           </div>
         </div>

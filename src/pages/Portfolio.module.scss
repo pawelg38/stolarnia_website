@@ -1,5 +1,10 @@
 .topMargin {
-  margin-top: 158px;
+  margin-top: 9vw;
+}
+@media (max-width: 700px) {
+  .topMargin {
+    margin-top: 22vw;
+  }
 }
 .bg1 {
   background:

@@ -31,6 +31,7 @@ function FinishedOrder(props) {
         }).catch((error) => {});
       });
     }).catch((error) => {});
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   var button = <h1>Loading</h1>;

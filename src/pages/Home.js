@@ -1,11 +1,11 @@
-import Slider from '../components/layout/Slider';
+import EntryView from '../components/layout/EntryView';
 import Adventages from '../components/layout/Adventages';
 import PortfolioPreview from "../components/layout/PortfolioPreview";
 
 function Home() {
   return (
     <div>
-      <Slider />
+      <EntryView />
       <Adventages />
       <PortfolioPreview />
     </div>

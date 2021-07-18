@@ -6,10 +6,10 @@ function PortfolioPreview() {
     <div className={classes.container}>
       <div className={classes.bgMask}>
         <div className={classes.seeMoreBox}>
-          <h1 className={classes.title}>NASZE REALIZACJE</h1>
+          <h1 className={classes.title}>Nasze realizacje</h1>
           <button className={classes.seeMoreBtn}>
             <Link to='/portfolio' className={classes.iconBox}>
-              <span class="material-icons" style={{fontSize: '90px'}}>double_arrow</span>
+              <span className={classes.materialIcons} style={{fontSize: '7vw'}}>double_arrow</span>
             </Link>
           </button>
         </div>

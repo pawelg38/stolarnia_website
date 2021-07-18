@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Layout from "./components/layout/Layout";
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
@@ -37,14 +37,6 @@ function App() {
         )}
       </Route>
     ))}
-      {/* <Switch> */}
-        {/* <Route path='/' exact>
-          <Home />
-        </Route> */}
-        {/* <Route path='/portfolio'>
-          <Portfolio />
-        </Route> */}
-      {/* </Switch> */}
     </Layout>
   );
 }

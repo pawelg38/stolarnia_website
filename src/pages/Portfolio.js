@@ -1,7 +1,3 @@
-import { Link } from 'react-router-dom';
-import Slider from '../components/layout/Slider';
-import Adventages from '../components/layout/Adventages';
-import PortfolioPreview from "../components/layout/PortfolioPreview";
 import classes from './Portfolio.module.scss';
 import FinishedOrder from '../components/FinishedOrder';
 
@@ -33,14 +29,7 @@ const storage = firebase.storage();
 // FIREBASE
 
 function Portfolio() {
-  const orders = [
-    {title: "Kuchnia 2021", desc: "Rzeszowie"},
-    {title: "Kuchnia 2020", desc: "Warszawie"},
-    {title: "Kuchnia 2019", desc: "Krakowie"},
-    {title: "Kuchnia 2018", desc: "Gdańsku"},
-  ]
   window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-
 
   const messagesRef = firestore.collection('finishedOrders');
   const query = messagesRef.orderBy('createdAt', 'desc');

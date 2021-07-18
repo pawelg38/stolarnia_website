@@ -1,15 +1,14 @@
-import classes from './Slider.module.scss'
-import slide from '../../assets/img/slide4.jpg';
+import classes from './EntryView.module.scss'
 import slide1 from '../../assets/img/slide5.jpg';
 import logo from '../../assets/logo/logo.png';
 
-function Slider() {
+function EntryView() {
   return (
-    <div className={classes.sliderContainer}>
-      <img src={slide1} />
+    <div className={classes.container}>
+      <img src={slide1} alt="background"/>
       <div className={classes.textBox}>
         <div className={classes.boxMask}>
-          <img className={classes.logo} src={logo} />
+          <img className={classes.logo} src={logo} alt="logo"/>
         </div>
         <div className={classes.text}>
           Zaplanuj z nami
@@ -20,4 +19,4 @@ function Slider() {
   )
 }
 
-export default Slider;
+export default EntryView;

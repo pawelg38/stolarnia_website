@@ -1,5 +1,4 @@
 import classes from "./MainNavigation.module.scss";
-import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import logo from '../../assets/logo/logo.png'
 import { Link } from 'react-router-dom';
@@ -31,7 +30,7 @@ function MainNavigation() {
       <Box boxShadow={13}>
         <div className={` ${classes.mainNav} ${lightBgClass ? classes.lightBg : classes.darkBg }`}>
           <Link to='/'>
-            <img className={classes.logo1} src={logo} />
+            <img className={classes.logo} src={logo} alt="logo"/>
           </Link>
           <div className={classes.dropMenuBtnBox}>
             <div onClick={toggleMenuHandler} className={`${classes.dropMenuBtn} ${isNavOpen ? classes.dropMenuBtnOpened : classes.dropMenuBtnClosed}`}>

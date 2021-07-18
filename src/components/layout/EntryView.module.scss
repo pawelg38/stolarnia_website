@@ -1,5 +1,4 @@
-.sliderContainer {
-  height: 50vw;
+.container {
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -55,14 +54,28 @@
 
 }
 
-@media (min-width: 1080px) {
-  .sliderContainer {
+@media (min-width: 0px) {
+  .container {
+    height: 70vw;
+    .textBox {
+      .text {
+        font-size: 5vw;
+        padding-left: 10px;
+        border-left: 2vw solid #000;
+      }
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+}
+@media (min-width: 720px) {
+  .container {
     height: 50vw;
 
     img {
-      //height: 100%;
-      height: 100%;
-      //filter: grayscale(50%);
+      width: 100%;
     }
   }
 }

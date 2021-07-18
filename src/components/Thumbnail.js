@@ -4,7 +4,7 @@ import img from '../assets/img/img1.jpg';
 function Thumbnail(props) {
   return (
     <div className={`${classes.thumbnailImg} ${props.active?classes.active:null}`}>
-      <img src={props.img} />
+      <img src={props.img} alt="gallery-item"/>
     </div>
   )
 }
