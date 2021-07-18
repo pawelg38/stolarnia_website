@@ -1,6 +1,7 @@
 .container {
   display: flex;
   background-color: rgb(50, 50, 50);
+  background-color: rgba(#000, .8);
   
   .info {
     display: flex;
@@ -26,6 +27,7 @@
       padding-bottom: 30px;
       height: fit-content;
       border-left: 2px solid rgb(150, 140, 255);
+      background-color: rgb(50, 50, 50);
     }
     .contact {
       margin-left: 50px;
@@ -35,6 +37,7 @@
       padding-bottom: 20px;
       height: fit-content;
       border-left: 2px solid rgb(150, 140, 255);
+      background-color: rgb(50, 50, 50);
     }
   }
   .mapBox {

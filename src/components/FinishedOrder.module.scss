@@ -1,0 +1,45 @@
+.unzip {
+  height: 75vh !important;
+}
+.projectSection {
+  height: 25vw;
+  overflow: hidden;
+  background-size: cover;
+  background-position-y: center;
+  color: #fff;
+  //justify-content: space-evenly;
+  display: flex;
+  position: relative;
+  transition: all 0.5s ease;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-left: 20px;
+  }
+  h1 {
+    width: fit-content;
+    font-size: 60px;
+    margin-top: 150px;
+  }
+  p {
+    width: fit-content;
+  }
+  button {
+    align-self: center;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: all .3s ease;
+    cursor: pointer;
+
+    &:hover {
+      border: none;
+      transform: scale(1.1, 1.1);
+      background-color: rgba(#000, .5);
+    }
+  }
+}

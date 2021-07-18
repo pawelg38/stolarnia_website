@@ -1,38 +1,62 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from '../components/layout/Slider';
 import Adventages from '../components/layout/Adventages';
 import PortfolioPreview from "../components/layout/PortfolioPreview";
 import classes from './Portfolio.module.scss';
-import img from '../assets/img/img1.jpg';
+import FinishedOrder from '../components/FinishedOrder';
+
+// FIREBASE
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/storage';
+
+
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+
+if (!firebase.apps.length) {
+  firebase.initializeApp({
+    apiKey: "AIzaSyCkaNhiSxkGrQKMqqaYS92Cid4QuXe7U_8",
+    authDomain: "stolarnia-project.firebaseapp.com",
+    databaseURL: "https://stolarnia-project-default-rtdb.firebaseio.com",
+    projectId: "stolarnia-project",
+    storageBucket: "stolarnia-project.appspot.com",
+    messagingSenderId: "653762010250",
+    appId: "1:653762010250:web:f71eaca977d0999929e173"
+  });
+}
+else {
+  firebase.app();
+}
+
+const firestore = firebase.firestore();
+const storage = firebase.storage();
+// FIREBASE
 
 function Portfolio() {
-  const [showGallery, setShowGallery] = useState(false);
+  const orders = [
+    {title: "Kuchnia 2021", desc: "Rzeszowie"},
+    {title: "Kuchnia 2020", desc: "Warszawie"},
+    {title: "Kuchnia 2019", desc: "Krakowie"},
+    {title: "Kuchnia 2018", desc: "Gdańsku"},
+  ]
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
 
-  function showGalleryHandler() {
-    setShowGallery(!showGallery);
-  }
+
+  const messagesRef = firestore.collection('finishedOrders');
+  const query = messagesRef.orderBy('createdAt', 'desc');
+  const [messages] = useCollectionData(query, {idField: 'id'});
+  const storageRef = storage.ref();
   return (
     <div>
       <div className={classes.topMargin}></div>
-      <div className={`${classes.projectSection} ${classes.bg1}`}>
-        <div className={classes.info}>
-          <h1>Kuchnia 2021</h1>
-          <p>Zrealizowana na zlecenie w Rzeszowie.</p>
-        </div>
-        <button onClick={showGalleryHandler}>
-          <span class="material-icons" style={{fontSize: "60px", color: "#fff"}}>arrow_right_alt</span>
-        </button>
-      </div>
-      <div className={`${classes.projectSection} ${classes.bg2}`}>
-        <div className={classes.info}>
-          <h1>Kuchnia 2021</h1>
-          <p>Zrealizowana na zlecenie w Rzeszowie.</p>
-        </div>
-        <button onClick={showGalleryHandler}>
-          <span class="material-icons" style={{fontSize: "60px", color: "#fff"}}>arrow_right_alt</span>
-        </button>
-      </div>
+      {messages && messages.map( (msg, index) => {
+        if (index % 2 === 0) {
+          return <FinishedOrder key={msg.id} storageRef={storageRef} msg={msg} bg={classes.bg1}/>
+        }
+        else {
+          return <FinishedOrder key={msg.id} storageRef={storageRef} msg={msg} bg={classes.bg2}/>
+        }
+      })}
       {/* <Link to='/'>Home</Link> */}
     </div>
   )

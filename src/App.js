@@ -5,10 +5,14 @@ import Portfolio from './pages/Portfolio';
 import { CSSTransition } from 'react-transition-group';
 
 import classes from './App.module.scss';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 const routes = [
   { path: '/', name: 'Home', Component: Home },
-  { path: '/portfolio', name: 'Portfolio', Component: Portfolio }
+  { path: '/portfolio', name: 'Portfolio', Component: Portfolio },
+  { path: '/about', name: 'About', Component: About },
+  { path: '/contact', name: 'Contact', Component: Contact }
 ]
 
 function App() {
@@ -25,7 +29,7 @@ function App() {
               exit: classes.exit,
               exitActive: classes.exitActive,
             }}
-            timeout={{enter:2500, exit:2500}}
+            timeout={{enter:500, exit:500}}
             unmountOnExit
           >
             <Component />

@@ -7,8 +7,8 @@ function Layout(props) {
   return (
     <div>
       <MainNavigation />
-        {props.children}
-      <Footer />
+      {props.children}
+      {/* <Footer /> */}
     </div>
   )
 }

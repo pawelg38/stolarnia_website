@@ -1,5 +1,5 @@
 .topMargin {
-  margin-top: 56px;
+  margin-top: 158px;
 }
 .bg1 {
   background:
@@ -9,45 +9,15 @@
 .bg2 {
   background:
     linear-gradient(45deg, rgba(255,255,255,0) 50%, rgba(255,255,255,.8) 50%),
-    url('../assets/img/img1.jpg');
+    url('../assets/img/img2.jpg');
 }
-.projectSection {
-  height: 25vw;
-  overflow: hidden;
-  background-size: cover;
-  background-position-y: center;
-  color: #fff;
-  //justify-content: space-evenly;
-  padding-left: 20px;
-  display: flex;
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-  }
-  h1 {
-    width: fit-content;
-    font-size: 60px;
-    margin-top: 150px;
-  }
-  p {
-    width: fit-content;
-  }
-  button {
-    align-self: center;
-    width: 80px;
-    height: 80px;
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    transition: all .3s ease;
-    cursor: pointer;
-
-    &:hover {
-      border: none;
-      transform: scale(1.1, 1.1);
-      background-color: rgba(#000, .5);
-    }
-  }
+.bg3 {
+  background:
+    linear-gradient(135deg, rgba(45,58,64,.8) 50%, rgba(255,255,255,0) 50%),
+    url('../assets/img/img3.jpg');
+}
+.bg4 {
+  background:
+    linear-gradient(45deg, rgba(255,255,255,0) 50%, rgba(255,255,255,.8) 50%),
+    url('../assets/img/img4.jpg');
 }

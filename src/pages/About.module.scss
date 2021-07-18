@@ -1,0 +1,23 @@
+.topMargin {
+  margin-top: 158px;
+}
+.container {
+  text-align: center;
+
+  .desc {
+    padding-top: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .liteFont {
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    p {
+      line-height: 1.5;
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+}

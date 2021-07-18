@@ -2,10 +2,12 @@
   position: absolute;
   width: 100%;
   left: 100%;
+  opacity: 0;
 }
 .enterActive {
   left: 0;
-  transition: all 2500ms linear;
+  opacity: 1;
+  transition: all 500ms ease;
 }
 .exit {
   position: absolute;
@@ -15,5 +17,6 @@
 }
 .exitActive {
   left: -100%;
-  transition: all 2500ms linear;
+  opacity: 0;
+  transition: all 500ms ease;
 }
